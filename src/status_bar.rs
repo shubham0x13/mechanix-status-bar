@@ -112,7 +112,7 @@ pub enum StatusUpdate {
     Bluetooth(BluetoothState),
     Cellular(CellularState),
     Airplane(AirplaneState),
-    Battery(u8),
+    Battery(Option<u8>),
     Glyph(GlyphState),
 }
 
