@@ -17,7 +17,7 @@ checksum = "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
 [[package]]
 name = "app"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "smallvec",
 ]
@@ -37,7 +37,7 @@ checksum = "d3fb67a6e08acf24fdeccbac2cb6ac4305825bd1f117462e0e6f2f193345ad56"
 [[package]]
 name = "atlas"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "fontdue",
@@ -111,6 +111,16 @@ name = "data-url"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be1e0bca6c3637f992fc1cc7cbc52a78c1ef6db076dbf1059c4323d6a2048376"
+
+[[package]]
+name = "dbus"
+version = "0.1.0"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
+dependencies = [
+ "app",
+ "ring",
+ "smallvec",
+]
 
 [[package]]
 name = "drm-fourcc"
@@ -223,12 +233,12 @@ dependencies = [
 [[package]]
 name = "geometry"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 
 [[package]]
 name = "gles"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "atlas",
  "gbm",
@@ -276,7 +286,7 @@ checksum = "edcd27d72f2f071c64249075f42e205ff93c9a4c5f6c6da53e79ed9f9832c285"
 [[package]]
 name = "interactivity"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "geometry",
@@ -331,7 +341,7 @@ dependencies = [
 [[package]]
 name = "layout"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "geometry",
@@ -369,10 +379,11 @@ checksum = "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6"
 [[package]]
 name = "mecha-wayland"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "atlas",
+ "dbus",
  "geometry",
  "gles",
  "interactivity",
@@ -399,7 +410,7 @@ dependencies = [
 [[package]]
 name = "mechanix-widgets"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "atlas",
@@ -464,7 +475,7 @@ checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 [[package]]
 name = "paint"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "atlas",
@@ -512,7 +523,7 @@ dependencies = [
 [[package]]
 name = "presentation"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "atlas",
@@ -567,7 +578,7 @@ dependencies = [
 [[package]]
 name = "render"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "geometry",
@@ -602,7 +613,7 @@ dependencies = [
 [[package]]
 name = "ring"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "io-uring",
@@ -749,7 +760,7 @@ dependencies = [
 [[package]]
 name = "text-input"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "interactivity",
@@ -760,7 +771,7 @@ dependencies = [
 [[package]]
 name = "theme"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "geometry",
@@ -883,7 +894,7 @@ dependencies = [
 [[package]]
 name = "wayland"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "bitflags 2.13.2",
@@ -909,7 +920,7 @@ dependencies = [
 [[package]]
 name = "widgets"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "atlas",
@@ -923,7 +934,7 @@ dependencies = [
 [[package]]
 name = "window"
 version = "0.1.0"
-source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#c39e136efdbc5aad38651ca93294259d1b546982"
+source = "git+https://github.com/indegrowl/mecha-wayland?branch=dev#0ef2ab969213a994e0ad76346af6359c601a3a0f"
 dependencies = [
  "app",
  "geometry",

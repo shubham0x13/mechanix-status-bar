@@ -60,6 +60,7 @@ fn main() {
     app.insert_resource(icons);
 
     app.add_module(RingModule::default())
+        .add_module(DBusModule::new().system())
         .add_module(
             WaylandModule::new()
                 .bind::<WlCompositor>()
