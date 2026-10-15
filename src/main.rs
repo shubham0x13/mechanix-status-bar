@@ -64,7 +64,6 @@ fn main() {
 
     app.add_module(RingModule::default())
         .add_module(DBusModule::new().system())
-        .add_module(UpowerModule)
         .add_module(
             WaylandModule::new()
                 .bind::<WlCompositor>()
@@ -80,5 +79,7 @@ fn main() {
 
     let root = app.root();
     app.spawn(root, ShellBuilder { root });
+    // The initial UPower reply emits directly to the existing status bar.
+    app.add_module(UpowerModule);
     app.run();
 }
