@@ -4,6 +4,9 @@ use mechanix_status_bar::{
     DEFAULT_BAR_HEIGHT, DEFAULT_ICON_SIZE, GEIST_MONO_BYTES, StatusIcons, status_bar,
 };
 
+mod upower;
+use upower::*;
+
 struct Shell;
 struct ShellBuilder {
     root: NodeId,
@@ -61,6 +64,7 @@ fn main() {
 
     app.add_module(RingModule::default())
         .add_module(DBusModule::new().system())
+        .add_module(UpowerModule)
         .add_module(
             WaylandModule::new()
                 .bind::<WlCompositor>()
